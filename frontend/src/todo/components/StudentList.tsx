@@ -21,11 +21,15 @@ export default function StudentList(props: StudentListProps){
     const studentComponent = filteredStudents.map((student) => {
         return <StudentComponent deleteStudent={() => props.deleteStudent(student.id)} student={{id: student.id, name: student.name}} key={student.id} />
     })
+
+    function mapStudents(){
+        return filteredStudents.length > 0 ? studentComponent : <p>Nix gute Name diese!</p>
+    }
     
     return(
         <section>
             <Search searchQuery={handleSearchString}/>
-            {studentComponent}
+            {mapStudents()}
         </section>
     )
 }
