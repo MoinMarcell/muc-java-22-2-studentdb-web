@@ -1,11 +1,11 @@
 import React from "react";
 import StudentList from "./components/StudentList";
 import AddStudent from "./components/AddStudent";
-import StudentsHook from "./hooks/StudentsHook";
+import UseStudents from "./hooks/UseStudents";
 
 export default function StudentApp(){
 
-    const [students, postStudent, deleteStudentById] = StudentsHook()
+    const [students, postStudent, deleteStudentById] = UseStudents()
 
     return(
         <section>

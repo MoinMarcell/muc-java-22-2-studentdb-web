@@ -3,7 +3,7 @@ import {Student} from "../models/Student";
 import axios from "axios";
 
 
-export default function StudentsHook(): [Student[], (name: string) => void, (id: string) => void]{
+export default function UseStudents(): [Student[], (name: string) => void, (id: string) => void]{
     const [students, setStudents] = useState<Student[]>([])
 
     useEffect(() => {
